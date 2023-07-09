@@ -43,6 +43,8 @@ public class TestBase {
     @AfterEach
     void addAttachment() {
         Attach.screenshotAs("Last step screenshot");
+        Attach.pageSource();
+        Attach.browserConsoleLogs();
         if (config.getIsRemote())
             Attach.addVideo();
     }
