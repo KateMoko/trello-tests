@@ -15,14 +15,13 @@ import java.util.Map;
 
 public class TestBase {
 
-    public static final TestConfig config = ConfigFactory.create(TestConfig.class, System.getProperties());
+    private static final TestConfig config = ConfigFactory.create(TestConfig.class, System.getProperties());
 
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = config.getBaseUrl();
         Configuration.browser = config.getBrowser();
         Configuration.browserVersion = config.getBrowserVersion();
-        Configuration.browserSize = "1920x1080";
         if (config.getIsRemote()) {
             Configuration.remote = config.getRemoteUrl();
             DesiredCapabilities capabilities = new DesiredCapabilities();
