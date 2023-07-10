@@ -13,15 +13,21 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
 
+import static com.codeborne.selenide.Selenide.closeWebDriver;
+
 public class TestBase {
 
     private static final TestConfig config = ConfigFactory.create(TestConfig.class, System.getProperties());
+    String userEmail = config.getTrelloUserEmail();
+    String userPassword = config.getTrelloUserPassword();
 
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = config.getBaseUrl();
         Configuration.browser = config.getBrowser();
         Configuration.browserVersion = config.getBrowserVersion();
+        Configuration.browserSize = "1920x1080";
+
         if (config.getIsRemote()) {
             Configuration.remote = config.getRemoteUrl();
             DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -29,7 +35,6 @@ public class TestBase {
                     "enableVNC", true,
                     "enableVideo", true
             ));
-
             Configuration.browserCapabilities = capabilities;
         }
     }
@@ -46,5 +51,7 @@ public class TestBase {
         Attach.browserConsoleLogs();
         if (config.getIsRemote())
             Attach.addVideo();
+
+        closeWebDriver();
     }
 }

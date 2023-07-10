@@ -8,7 +8,7 @@ import org.aeonbits.owner.Config;
 public interface TestConfig extends Config {
 
     @Key("baseUrl")
-    @DefaultValue("https://trello.com")
+    @DefaultValue("https://trello.com/en")
     String getBaseUrl();
 
     @Key("browser")
@@ -24,4 +24,10 @@ public interface TestConfig extends Config {
 
     @Key("remoteUrl")
     String getRemoteUrl();
+
+    @Key("trelloUserEmail")
+    String getTrelloUserEmail();
+
+    @Key("trelloUserPassword")
+    String getTrelloUserPassword();
 }
