@@ -8,7 +8,7 @@ import org.aeonbits.owner.Config;
 public interface TestConfig extends Config {
 
     @Key("baseUrl")
-    @DefaultValue("https://trello.com/en")
+    @DefaultValue("https://trello.com")
     String getBaseUrl();
 
     @Key("browser")
