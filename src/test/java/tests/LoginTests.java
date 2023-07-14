@@ -30,8 +30,8 @@ public class LoginTests extends TestBase {
         );
 
         step("Check that the user's email is displayed in the account menu", () -> {
-            headerComponent.verifyAuthenticatedHeaderIsVisible();
-            headerComponent.verifyUserEmailDisplayedInMenu(userEmail);
+            headerComponent.verifyAuthenticatedHeaderIsVisible()
+                    .verifyUserEmailDisplayedInMenu(userEmail);
         });
     }
 }
