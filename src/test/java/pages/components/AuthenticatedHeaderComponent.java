@@ -13,18 +13,18 @@ public class AuthenticatedHeaderComponent {
             logoutButton = $("[data-testid='account-menu-logout']"),
             menuAccountSection = $("[data-testid='account-menu-account-section']");
 
-    public AuthenticatedHeaderComponent verifyAuthenticatedHeaderIsVisible(){
+    public AuthenticatedHeaderComponent verifyAuthenticatedHeaderIsVisible() {
         header.shouldBe(visible);
         return this;
     }
 
-    public AuthenticatedHeaderComponent verifyUserEmailDisplayedInMenu(String userEmail){
+    public AuthenticatedHeaderComponent verifyUserEmailDisplayedInMenu(String userEmail) {
         userIconButton.click();
         menuAccountSection.shouldHave(text(userEmail));
         return this;
     }
 
-    public void logOut(){
+    public void logOut() {
         userIconButton.click();
         logoutButton.click();
     }

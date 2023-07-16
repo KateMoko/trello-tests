@@ -14,8 +14,9 @@ import java.util.stream.Stream;
 
 import static io.qameta.allure.Allure.step;
 
+@Tag("ui")
 @Feature("Main page")
-public class MenuItemsTests extends TestBase{
+public class MenuItemsTests extends TestBase {
 
     MainPage mainPage = new MainPage();
 
@@ -35,17 +36,17 @@ public class MenuItemsTests extends TestBase{
                 )
         );
     }
-    @Tag("web")
+
     @Story("Main page menu")
     @DisplayName("Menu sub-items verification:")
     @MethodSource("menuItemsTestDataProvider")
     @ParameterizedTest(name = "For the {0} menu item following sub-items are displayed: {1}")
-    void menuItemsTest(String menuItem, List<String> menuSubItems){
+    void menuItemsTest(String menuItem, List<String> menuSubItems) {
         step("Open main page", () ->
                 mainPage.openPage());
 
-        step("Click on the menu item", ()->
-               mainPage.openMenuItemWithName(menuItem) );
+        step("Click on the menu item", () ->
+                mainPage.openMenuItemWithName(menuItem));
 
         step("Verify menu sub-items", () ->
                 mainPage.verifyMenuSubItems(menuSubItems));

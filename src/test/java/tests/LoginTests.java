@@ -10,13 +10,13 @@ import pages.components.AuthenticatedHeaderComponent;
 
 import static io.qameta.allure.Allure.step;
 
+@Tag("ui")
 @Feature("Authorization")
 public class LoginTests extends TestBase {
 
     LoginPage loginPage = new LoginPage();
     AuthenticatedHeaderComponent headerComponent = new AuthenticatedHeaderComponent();
 
-    @Tag("web")
     @Story("Authorization with email and password")
     @Test
     @DisplayName("Successful authorization with valid email and password credentials")

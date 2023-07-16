@@ -17,48 +17,54 @@ public class EnterprisePricingPage {
             errorMessage = $("[data-testid='ui-pricing-calculator-error']");
 
     @Step("Open Enterprise pricing page")
-    public EnterprisePricingPage openPage(){
+    public EnterprisePricingPage openPage() {
         open("/en/enterprise");
         pricingCalculatorSection.shouldBe(visible);
 
         return this;
     }
 
+    @Step("Check that number of users = {numberOfUsers}")
+    public EnterprisePricingPage verifyNumberOfUsersValue(int numberOfUsers) {
+        numberOfUsersInput.shouldHave(value(String.valueOf(numberOfUsers)));
+        return this;
+    }
+
     @Step("Enter number of users = {numberOfUsers}")
-    public EnterprisePricingPage enterNumberOfUsers(int numberOfUsers){
+    public EnterprisePricingPage enterNumberOfUsers(int numberOfUsers) {
         pricingCalculatorSection.scrollIntoView(false);
         numberOfUsersInput.click();
-        numberOfUsersInput.sendKeys(Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE);
+        numberOfUsersInput.sendKeys(Keys.BACK_SPACE, Keys.BACK_SPACE);
         numberOfUsersInput.sendKeys(String.valueOf(numberOfUsers));
         return this;
     }
 
     @Step("Verify that the monthly price is {price}")
-    public EnterprisePricingPage verifyMonthlyPrice(String price){
+    public EnterprisePricingPage verifyMonthlyPrice(String price) {
         monthlyPrice.shouldHave(text(price));
         return this;
     }
 
     @Step("Verify that the monthly price is not displayed")
-    public EnterprisePricingPage verifyMonthlyPriceNotDisplayed(){
+    public EnterprisePricingPage verifyMonthlyPriceNotDisplayed() {
         monthlyPrice.shouldNotBe(visible);
         return this;
     }
 
-    @Step("Verify that the annual price is  {price}")
-    public EnterprisePricingPage verifyAnnualPrice(String price){
+    @Step("Verify that the annual price is {price}")
+    public EnterprisePricingPage verifyAnnualPrice(String price) {
         annualPrice.shouldHave(text(price));
         return this;
     }
 
     @Step("Verify that the monthly price is not displayed")
-    public EnterprisePricingPage verifyAnnualPriceNotDisplayed(){
+    public EnterprisePricingPage verifyAnnualPriceNotDisplayed() {
         annualPrice.shouldNotBe(visible);
         return this;
     }
 
     @Step("Verify that the message '{message}' is displayed")
-    public EnterprisePricingPage verifyErrorMessage(String message){
+    public EnterprisePricingPage verifyErrorMessage(String message) {
         errorMessage.shouldHave(text(message));
         return this;
     }
