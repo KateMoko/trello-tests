@@ -13,7 +13,7 @@ public class LoginPage {
             loginButton = $("#login-submit");
 
     public LoginPage openPage() {
-        open("en//login");
+        open("/en/login");
         return this;
     }
 
