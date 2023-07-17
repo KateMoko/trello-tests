@@ -3,10 +3,11 @@ Trello is a web-based, kanban-style, list-making application
 ___
 ## Table of contents
 
-- [Stack of technologies](#-stack-of-technologies)
+- [Stack of technologies](#computer-stack-of-technologies)
+- [List of tests](#list-of-tests)
 
 
-## 💻 Stack of technologies
+## :computer: Stack of technologies
 <div style="text-align: center;">
 <a href="https://jetbrains.com/idea/"><img src="images/logo/IntelliJ_IDEA.svg" width="50" height="50"  alt="IntelliJ IDEA"/></a>
 <a href="https://java.com/"><img src="images/logo/Java.svg" width="50" height="50"  alt="Java"/></a>
@@ -20,3 +21,5 @@ ___
 <a href="https://qameta.io/"><img src="images/logo/AllureTestOps.svg" width="50" height="50"  alt="Allure Testops"/></a>  
 <a href="https://www.atlassian.com/software/jira"><img src="images/logo/Jira.svg" width="50" height="50"  alt="Jira"/></a>  
 </div>
+
+## List of tests
