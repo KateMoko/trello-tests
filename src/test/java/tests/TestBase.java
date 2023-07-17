@@ -52,6 +52,6 @@ public class TestBase {
         if (config.getIsRemote())
             Attach.addVideo();
 
-        closeWebDriver();
+//        closeWebDriver();
     }
 }

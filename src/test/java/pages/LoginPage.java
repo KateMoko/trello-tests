@@ -1,5 +1,6 @@
 package pages;
 
+import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -13,7 +14,8 @@ public class LoginPage {
             loginButton = $("#login-submit");
 
     public LoginPage openPage() {
-        open("/en/login");
+        open("/login");
+        userEmailInput.shouldBe(Condition.interactable);
         return this;
     }
 
