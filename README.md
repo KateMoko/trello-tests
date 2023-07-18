@@ -26,10 +26,10 @@ In this project, the automated tests are written in <code>Java</code> using the 
 ## List of tests
 - [x] Authorization with email and password
 - [x] Verification of displayed sub-items for each menu item on the main page (parametrized test)
-### Integrations page
+#### Integrations page
 - [x] Check the search of integrations by name
 - [x] Verification of the message when no results match the search query
-### Pricing calculator for enterprise teams
+#### Pricing calculator for enterprise teams
 - [x] Check the number of users and prices displayed by default
 - [x] Check prices for the maximum number of users
 - [x] Check the error message when the number of users is less than minimum
