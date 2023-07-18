@@ -26,7 +26,7 @@ public class IntegrationsSearchTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Verify message when there are no results matching the search query")
+    @DisplayName("Verify message when no results are matching the search query")
     void checkNoSearchResultMessage() {
         String searchQuery = "~qwer1234";
         String expectedMessage = "We're sorry, we can’t find any results for your search";
