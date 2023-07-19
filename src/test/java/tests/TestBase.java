@@ -26,7 +26,7 @@ public class TestBase {
         Configuration.baseUrl = config.getBaseUrl();
         Configuration.browser = config.getBrowser();
         Configuration.browserVersion = config.getBrowserVersion();
-        Configuration.browserSize = "1920x1080";
+        Configuration.browserSize = config.getBrowserSize();
 
         if (config.getIsRemote()) {
             Configuration.remote = config.getRemoteUrl();

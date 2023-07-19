@@ -5,6 +5,7 @@ ___
 
 - [Stack of technologies](#computer-stack-of-technologies)
 - [List of tests](#list-of-tests)
+- [Running automated tests on a local machine](#running-automated-tests-on-a-local-machine)
 
 
 ## :computer: Stack of technologies
@@ -34,3 +35,19 @@ In this project, the automated tests are written in <code>Java</code> using the 
 - [x] Check prices for the maximum number of users
 - [x] Check the error message when the number of users is less than minimum
 - [x] Check the error message when the number of users exceeds the maximum
+
+
+## Running automated tests on a local machine
+To run tests locally on your machine, add the local.properties file to the src/test/resources/config folder and fill in the following properties:
+
+```properties
+browser = <browser>
+browserSize = <e.g. 1920x1080>
+baseUrl = <Trello base URL>
+trelloUserEmail = <Trello user email>
+trelloUserPassword = <Trello user password>
+```
+Then use the following command:
+```
+gradle clean test -Denv=local
+```
