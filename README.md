@@ -7,6 +7,11 @@ ___
 - [List of tests](#list-of-tests)
 - [Running tests on a local machine](#running-automated-tests-on-a-local-machine)
 - [Running tests in Jenkins](#running-tests-in-jenkins)
+- [Test results report in Allure Report](#test-results-report-in-allure-report)
+- [Integration with Allure TestOps](#integration-with-allure-testops)
+- [Integration with Jira](#integration-with-jira)
+- [Telegram notifications using a bot](#telegram-notifications-using-a-bot)
+- [Example of test execution in Selenoid](#example-of-test-execution-in-selenoid)
 
 
 ## :computer: Stack of technologies
@@ -67,4 +72,29 @@ gradle clean test
 -DtrelloUserEmail=TRELLO_USER_EMAIL
 -DtrelloUserPassword=TRELLO_USER_PASSWORD
 ```
-## Running tests in [Jenkins](https://jenkins.autotests.cloud/job/C19-CatherineMoko-final_project/)
+## Running tests in Jenkins
+To run tests in Jenkins, follow these steps:
+1. Click on the [provided link](https://jenkins.autotests.cloud/job/C19-CatherineMoko-final_project/)
+2. Click the **Build with Parameters** link
+3. Modify the parameters as needed
+4. Click the **Build** button, and build will be started
+
+
+Once the build is complete, viewing the Allure report becomes available.
+
+
+## Test results report in [Allure Report](https://jenkins.autotests.cloud/job/C19-CatherineMoko-final_project/allure/)
+The report of the test execution includes:
+ - Test steps
+ - Screenshot of the page on the last test step
+ - Page Source
+ - Browser console logs
+ - Video of the test run
+
+## Integration with Allure TestOps
+
+## Integration with Jira
+
+## Telegram notifications using a bot
+
+## Example of test execution in Selenoid
