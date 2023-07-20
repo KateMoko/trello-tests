@@ -5,7 +5,8 @@ ___
 
 - [Stack of technologies](#computer-stack-of-technologies)
 - [List of tests](#list-of-tests)
-- [Running automated tests on a local machine](#running-automated-tests-on-a-local-machine)
+- [Running tests on a local machine](#running-automated-tests-on-a-local-machine)
+- [Running tests in Jenkins](#running-tests-in-jenkins)
 
 
 ## :computer: Stack of technologies
@@ -41,13 +42,29 @@ In this project, the automated tests are written in <code>Java</code> using the 
 To run tests locally on your machine, add the local.properties file to the src/test/resources/config folder and fill in the following properties:
 
 ```properties
-browser = <browser>
-browserSize = <e.g. 1920x1080>
-baseUrl = <Trello base URL>
-trelloUserEmail = <Trello user email>
-trelloUserPassword = <Trello user password>
+browser = BROWSER
+browserSize = BROWSER_SIZE
+baseUrl = BASE_URL
+trelloUserEmail = TRELLO_USER_EMAIL
+trelloUserPassword = TRELLO_USER_PASSWORD
 ```
+>- <code>BROWSER</code> - browser in which the tests will be run (Chrome is set by default)
+>- <code>BROWSER_SIZE</code> - size of the browser window (1920x1080 is set by default)
+>- <code>BASE_URL</code> - the base URL for the web application under test
+>- <code>TRELLO_USER_EMAIL</code> - test account login
+>- <code>TRELLO_USER_PASSWORD</code> - test account password
+
 Then use the following command:
 ```
 gradle clean test -Denv=local
 ```
+Or you can specify the parameters directly in the command to run:
+```
+gradle clean test 
+-Dbrowser=BROWSER 
+-DbrowserSize=BROWSER_SIZE
+-DbaseUrl=BASE_URL
+-DtrelloUserEmail=TRELLO_USER_EMAIL
+-DtrelloUserPassword=TRELLO_USER_PASSWORD
+```
+## Running tests in [Jenkins](https://jenkins.autotests.cloud/job/C19-CatherineMoko-final_project/)
