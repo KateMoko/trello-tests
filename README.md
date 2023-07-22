@@ -80,12 +80,12 @@ To run tests in Jenkins, follow these steps:
 4. Click the **Build** button, and build will be started
 
 <div style="text-align: center;">
-  <img src="media/screens/jenkins_1.png" alt="Jenkins">
+  <img src="media/screens/jenkins_1.png" alt="Jenkins" width="800">
 </div>
 
 Once the build is complete, viewing the Allure report becomes available.
 <div style="text-align: left;">
-  <img src="media/screens/jenkins_2.png" alt="Jenkins">
+  <img src="media/screens/jenkins_2.png" alt="Jenkins" width="400">
 </div>
 
 ## Test results report in [Allure Report](https://jenkins.autotests.cloud/job/C19-CatherineMoko-final_project/allure/)
@@ -95,11 +95,35 @@ The report of the test execution includes:
  - Page Source
  - Browser console logs
  - Video of the test run
+<div style="text-align: center;">
+  <img src="media/screens/allure_report_1.png" alt="allure report" width="800">
+</div>
+
+<div style="text-align: center;">
+  <img src="media/screens/allure_report_2.png" alt="allure report" width="800">
+</div>
 
 ## Integration with Allure TestOps
+<div style="text-align: center;">
+  <img src="media/screens/allure_testops_1.png" alt="allure report" width="800">
+</div>
+
+<div style="text-align: center;">
+  <img src="media/screens/allure_testops_2.png" alt="allure report" width="800">
+</div>
 
 ## Integration with Jira
+<div style="text-align: center;">
+  <img src="media/screens/jira.png" alt="allure report" width="800">
+</div>
 
 ## Telegram notifications using a bot
+After passing all the tests, an automatic report is sent to the Telegram messenger.
+<div style="text-align: center;">
+  <img src="media/screens/telegram.png" alt="allure report" width="500">
+</div>
 
 ## Example of test execution in Selenoid
+<div style="text-align: center;">
+  <img title="Selenoid Video" src="media/screens/video.gif" alt="Test execution in Selenoid">
+</div>
