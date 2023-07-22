@@ -26,8 +26,14 @@ public interface TestConfig extends Config {
     @DefaultValue("false")
     Boolean getIsRemote();
 
-    @Key("remoteUrl")
-    String getRemoteUrl();
+    @Key("selenoidUrl")
+    String getSelenoidUrl();
+
+    @Key("selenoidLogin")
+    String getSelenoidLogin();
+
+    @Key("selenoidPassword")
+    String getSelenoidPassword();
 
     @Key("trelloUserEmail")
     String getTrelloUserEmail();

@@ -29,7 +29,11 @@ public class TestBase {
         Configuration.browserSize = config.getBrowserSize();
 
         if (config.getIsRemote()) {
-            Configuration.remote = config.getRemoteUrl();
+            Configuration.remote = String.format("https://%s:%s@%s",
+                    config.getSelenoidLogin(),
+                    config.getSelenoidPassword(),
+                    config.getSelenoidUrl().replace("https://", ""));
+
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                     "enableVNC", true,
@@ -52,6 +56,6 @@ public class TestBase {
         if (config.getIsRemote())
             Attach.addVideo();
 
-//        closeWebDriver();
+        closeWebDriver();
     }
 }
