@@ -10,6 +10,7 @@ import pages.EnterprisePricingPage;
 @Tag("ui")
 @Feature("Pricing")
 @Story("Enterprise pricing calculator")
+@DisplayName("Enterprise pricing calculator")
 public class EnterprisePricingTests extends TestBase {
 
     EnterprisePricingPage enterprisePricingPage = new EnterprisePricingPage();

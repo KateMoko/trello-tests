@@ -16,6 +16,7 @@ import static io.qameta.allure.Allure.step;
 
 @Tag("ui")
 @Feature("Main page")
+@DisplayName("Main page menu items")
 public class MenuItemsTests extends TestBase {
 
     MainPage mainPage = new MainPage();

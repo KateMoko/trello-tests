@@ -12,6 +12,7 @@ import static io.qameta.allure.Allure.step;
 
 @Tag("ui")
 @Feature("Authorization")
+@DisplayName("Authorization")
 public class LoginTests extends TestBase {
 
     LoginPage loginPage = new LoginPage();
