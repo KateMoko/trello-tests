@@ -80,7 +80,7 @@ To run tests in Jenkins, follow these steps:
 4. Click the **Build** button, and build will be started
 
 <div style="text-align: center;">
-  <img src="media/screens/jenkins_1.png" alt="Jenkins" width="800">
+  <img src="media/screens/jenkins_1.png" alt="Jenkins" width="900">
 </div>
 
 Once the build is complete, viewing the Allure report becomes available.
@@ -96,25 +96,25 @@ The report of the test execution includes:
  - Browser console logs
  - Video of the test run
 <div style="text-align: center;">
-  <img src="media/screens/allure_report_1.png" alt="allure report" width="800">
+  <img src="media/screens/allure_report_1.png" alt="allure report" width="900">
 </div>
 
 <div style="text-align: center;">
-  <img src="media/screens/allure_report_2.png" alt="allure report" width="800">
+  <img src="media/screens/allure_report_2.png" alt="allure report" width="900">
 </div>
 
-## Integration with Allure TestOps
+## Integration with [Allure TestOps](https://allure.autotests.cloud/project/3544/dashboards)
 <div style="text-align: center;">
-  <img src="media/screens/allure_testops_1.png" alt="allure report" width="800">
+  <img src="media/screens/allure_testops_1.png" alt="allure report" width="900">
 </div>
 
 <div style="text-align: center;">
-  <img src="media/screens/allure_testops_2.png" alt="allure report" width="800">
+  <img src="media/screens/allure_testops_2.png" alt="allure report" width="900">
 </div>
 
-## Integration with Jira
+## Integration with [Jira](https://jira.autotests.cloud/browse/HOMEWORK-804)
 <div style="text-align: center;">
-  <img src="media/screens/jira.png" alt="allure report" width="800">
+  <img src="media/screens/jira.png" alt="allure report" width="900">
 </div>
 
 ## Telegram notifications using a bot
