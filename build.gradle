@@ -18,7 +18,7 @@ def jUnitVersion = "5.9.3",
     selenideVersion = "6.16.1",
     ownerVersion = "1.0.12",
     jsoupVersion = "1.16.1",
-    fakerVersion = "2.0.1"
+    fakerVersion = "1.0.2"
 
 allure {
     report {
@@ -43,7 +43,7 @@ dependencies {
             "io.qameta.allure:allure-rest-assured:$allureVersion",
             "org.jsoup:jsoup:$jsoupVersion",
             "org.aeonbits.owner:owner:$ownerVersion",
-            "net.datafaker:datafaker:$fakerVersion",
+            "com.github.javafaker:javafaker:$fakerVersion",
             "org.slf4j:slf4j-simple:$slf4jVersion")
 }
 

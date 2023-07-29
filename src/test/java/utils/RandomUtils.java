@@ -1,6 +1,6 @@
 package utils;
 
-import net.datafaker.Faker;
+import com.github.javafaker.Faker;
 
 public class RandomUtils {
 
@@ -9,7 +9,7 @@ public class RandomUtils {
             "Blocked", "Done"};
 
     public String getBoardName() {
-        return faker.dessert().flavor() + " " + faker.dessert().variety();
+        return faker.leagueOfLegends().location();
     }
 
     public String getListName() {
@@ -17,6 +17,6 @@ public class RandomUtils {
     }
 
     public String getCardName() {
-        return faker.appliance().equipment() + faker.emoji().smiley();
+        return faker.leagueOfLegends().quote();
     }
 }
