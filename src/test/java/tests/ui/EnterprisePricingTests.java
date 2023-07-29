@@ -1,6 +1,7 @@
-package tests;
+package tests.ui;
 
 import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -8,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import pages.EnterprisePricingPage;
 
 @Tag("ui")
+@Owner("EMoiseenko")
 @Feature("Pricing")
 @Story("Enterprise pricing calculator")
 @DisplayName("Enterprise pricing calculator")

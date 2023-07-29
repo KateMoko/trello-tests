@@ -10,7 +10,6 @@ public class AuthenticatedHeaderComponent {
 
     private final SelenideElement header = $("[data-testid='authenticated-header']"),
             userIconButton = $("[data-testid='header-member-menu-button']"),
-            logoutButton = $("[data-testid='account-menu-logout']"),
             menuAccountSection = $("[data-testid='account-menu-account-section']");
 
     public AuthenticatedHeaderComponent verifyAuthenticatedHeaderIsVisible() {
@@ -21,11 +20,7 @@ public class AuthenticatedHeaderComponent {
     public AuthenticatedHeaderComponent verifyUserEmailDisplayedInMenu(String userEmail) {
         userIconButton.click();
         menuAccountSection.shouldHave(text(userEmail));
-        return this;
-    }
-
-    public void logOut() {
         userIconButton.click();
-        logoutButton.click();
+        return this;
     }
 }

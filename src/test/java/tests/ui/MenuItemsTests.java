@@ -1,6 +1,7 @@
-package tests;
+package tests.ui;
 
 import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -15,6 +16,7 @@ import java.util.stream.Stream;
 import static io.qameta.allure.Allure.step;
 
 @Tag("ui")
+@Owner("EMoiseenko")
 @Feature("Main page")
 @DisplayName("Main page menu items")
 public class MenuItemsTests extends TestBase {
