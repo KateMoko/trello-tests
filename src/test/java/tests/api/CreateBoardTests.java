@@ -1,6 +1,7 @@
 package tests.api;
 
 import api.BoardApi;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import models.BoardModel;
@@ -17,6 +18,7 @@ import static specs.Specs.*;
 
 @Tag("api")
 @Owner("EMoiseenko")
+@Feature("Actions with boards")
 @Story("Boards creation")
 @DisplayName("Boards creation")
 public class CreateBoardTests {

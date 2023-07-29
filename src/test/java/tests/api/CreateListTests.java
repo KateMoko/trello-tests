@@ -2,6 +2,7 @@ package tests.api;
 
 import api.BoardApi;
 import api.ListApi;
+import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import models.BoardModel;
@@ -16,6 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Tag("api")
 @Owner("EMoiseenko")
+@Feature("Actions with lists")
 @Story("Lists creation")
 @DisplayName("Lists creation")
 public class CreateListTests {
