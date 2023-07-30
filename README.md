@@ -78,11 +78,11 @@ Then use the following command:
 ```
 gradle clean TASK -Denv=local
 ```
-<code>TASK</code> - ui / api / test
+<code>TASK</code> - ui_test / api_test / test
 
 Or you can specify parameters directly in the command to run:
 ```
-gradle clean TASK 
+gradle clean TASK
 -Dbrowser=BROWSER 
 -DbrowserSize=BROWSER_SIZE
 -DbaseUrl=BASE_URL
