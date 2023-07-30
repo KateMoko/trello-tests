@@ -14,12 +14,14 @@ public class EnterprisePricingPage {
             numberOfUsersInput = $("input[data-testid='ui-pricing-calculator-input']"),
             monthlyPrice = $("[data-testid='ui-pricing-calculator-monthly-price']"),
             annualPrice = $("[data-testid='ui-pricing-calculator-annual-price']"),
-            errorMessage = $("[data-testid='ui-pricing-calculator-error']");
+            errorMessage = $("[data-testid='ui-pricing-calculator-error']"),
+            acceptCookies = $("#onetrust-accept-btn-handler");
 
     @Step("Open Enterprise pricing page")
     public EnterprisePricingPage openPage() {
         open("/en/enterprise");
         pricingCalculatorSection.shouldBe(visible);
+        acceptCookies.click();
 
         return this;
     }
