@@ -23,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CreateListTests {
 
     @Test
-    @DisplayName("Successfully creating a list in the board")
+    @DisplayName("Successful creation of a list in the board")
     void createListInBoardTest() {
         BoardApi boardApi = new BoardApi();
         RandomUtils randomUtils = new RandomUtils();

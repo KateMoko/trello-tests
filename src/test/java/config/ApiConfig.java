@@ -7,6 +7,7 @@ import org.aeonbits.owner.Config;
 })
 public interface ApiConfig extends Config{
     @Key("apiBaseUrl")
+    @DefaultValue("https://api.trello.com")
     String getApiBaseUrl();
 
     @Key("trelloApiKey")

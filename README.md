@@ -4,7 +4,8 @@ ___
 ## Table of contents
 
 - [Stack of technologies](#computer-stack-of-technologies)
-- [List of tests](#list-of-tests)
+- [List of UI tests](#list-of-ui-tests)
+- [List of API tests](#list-of-api-tests)
 - [Running tests on a local machine](#running-automated-tests-on-a-local-machine)
 - [Running tests in Jenkins](#running-tests-in-jenkins)
 - [Test results report in Allure Report](#test-results-report-in-allure-report)
@@ -29,9 +30,9 @@ ___
 <a href="https://qameta.io/"><img src="media/logo/AllureTestOps.svg" width="50" height="50"  alt="Allure Testops"/></a>  
 <a href="https://www.atlassian.com/software/jira"><img src="media/logo/Jira.svg" width="50" height="50"  alt="Jira"/></a>  
 </div>
-In this project, the automated tests are written in <code>Java</code> using the <code>Selenide</code> framework. <code>Gradle</code> is used to build the project. <code>JUnit5</code> is used as the unit testing framework. The tests run from <code>Jenkins</code>. After the run is completed, a notification is sent using a bot on Telegram. <code>Selenoid</code> is used to run browsers in Docker containers. Integration with <code>Allure TestOps</code> and <code>Jira</code> is set up for test reporting and test result analytics.
+In this project, the automated tests are written in <code>Java</code> using the <code>Selenide</code> framework. <code>Gradle</code> is used to build the project. <code>JUnit5</code> is used as the unit testing framework. <code>Rest-assured</code> library was used for API tests. The tests run from <code>Jenkins</code>. After the run is completed, a notification is sent using a bot on Telegram. <code>Selenoid</code> is used to run browsers in Docker containers. Integration with <code>Allure TestOps</code> and <code>Jira</code> is set up for test reporting and test result analytics.
 
-## List of tests
+## List of UI Tests
 - [x] Authorization with email and password
 - [x] Verification of displayed sub-items for each menu item on the main page (parametrized test)
 #### Integrations page
@@ -43,6 +44,13 @@ In this project, the automated tests are written in <code>Java</code> using the 
 - [x] Check the error message when the number of users is less than minimum
 - [x] Check the error message when the number of users exceeds the maximum
 
+## List of API tests
+- [x] Successful board creation
+- [x] Check if a board cannot be created without specifying its name
+- [x] Successful deletion of the board
+- [x] Successful creation of a list in the board
+- [x] Successful creation of a card in the list
+- [x] Card update: moving the card to another list
 
 ## Running automated tests on a local machine
 To run tests locally on your machine, add the local.properties file to the src/test/resources/config folder and fill in the following properties:
@@ -53,25 +61,35 @@ browserSize = BROWSER_SIZE
 baseUrl = BASE_URL
 trelloUserEmail = TRELLO_USER_EMAIL
 trelloUserPassword = TRELLO_USER_PASSWORD
+apiBaseUrl = API_BASE_URL
+trelloApiKey = TRELLO_API_KEY
+trelloApiToken = TRELLO_API_TOKEN
 ```
 >- <code>BROWSER</code> - browser in which the tests will be run (Chrome is set by default)
 >- <code>BROWSER_SIZE</code> - size of the browser window (1920x1080 is set by default)
->- <code>BASE_URL</code> - the base URL for the web application under test
+>- <code>BASE_URL</code> - the base URL of the web application under test
 >- <code>TRELLO_USER_EMAIL</code> - test account login
 >- <code>TRELLO_USER_PASSWORD</code> - test account password
+>- <code>API_BASE_URL</code> - the base URL of the API
+>- <code>TRELLO_API_KEY</code> - API key for Trello test account
+>- <code>TRELLO_API_TOKEN</code> - API token for Trello test account
 
 Then use the following command:
 ```
-gradle clean test -Denv=local
+gradle clean TASK -Denv=local
 ```
+<code>TASK</code> - ui / api / test 
 Or you can specify the parameters directly in the command to run:
 ```
-gradle clean test 
+gradle clean TASK 
 -Dbrowser=BROWSER 
 -DbrowserSize=BROWSER_SIZE
 -DbaseUrl=BASE_URL
 -DtrelloUserEmail=TRELLO_USER_EMAIL
 -DtrelloUserPassword=TRELLO_USER_PASSWORD
+-DapiBaseUrl=API_BASE_URL
+-DtrelloApiKey=TRELLO_API_KEY
+-DtrelloApiToken=TRELLO_API_TOKEN
 ```
 ## Running tests in Jenkins
 To run tests in Jenkins, follow these steps:

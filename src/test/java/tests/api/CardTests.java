@@ -31,7 +31,7 @@ public class CardTests {
     RandomUtils randomUtils = new RandomUtils();
 
     @Test
-    @DisplayName("Successful card creation")
+    @DisplayName("Successful creation of a card in the list")
     void createCardTests() {
         String cardName = randomUtils.getCardName();
 
@@ -60,7 +60,7 @@ public class CardTests {
     }
 
     @Test
-    @DisplayName("Update card: move to another list")
+    @DisplayName("Card update: moving the card to another list")
     void moveCardToAnotherListTest() {
         String cardName = randomUtils.getCardName();
 
