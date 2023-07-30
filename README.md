@@ -78,8 +78,9 @@ Then use the following command:
 ```
 gradle clean TASK -Denv=local
 ```
-<code>TASK</code> - ui / api / test 
-Or you can specify the parameters directly in the command to run:
+<code>TASK</code> - ui / api / test
+
+Or you can specify parameters directly in the command to run:
 ```
 gradle clean TASK 
 -Dbrowser=BROWSER 
@@ -87,7 +88,7 @@ gradle clean TASK
 -DbaseUrl=BASE_URL
 -DtrelloUserEmail=TRELLO_USER_EMAIL
 -DtrelloUserPassword=TRELLO_USER_PASSWORD
--DapiBaseUrl=API_BASE_URL
+-DapiBaseUrl=API_BASE_URLgit
 -DtrelloApiKey=TRELLO_API_KEY
 -DtrelloApiToken=TRELLO_API_TOKEN
 ```
