@@ -22,7 +22,6 @@ public class EnterprisePricingPage {
         open("/en/enterprise");
         pricingCalculatorSection.shouldBe(visible);
         acceptCookies.click();
-
         return this;
     }
 

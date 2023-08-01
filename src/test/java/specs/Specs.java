@@ -1,6 +1,7 @@
 package specs;
 
 import config.ApiConfig;
+import io.restassured.RestAssured;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
@@ -20,10 +21,10 @@ public class Specs {
     static {
         credentials.setKey(apiConfig.getTrelloApiKey());
         credentials.setToken(apiConfig.getTrelloApiToken());
+        RestAssured.baseURI = apiConfig.getApiBaseUrl();
     }
 
     public static RequestSpecification requestSpec = with()
-            .baseUri(apiConfig.getApiBaseUrl())
             .body(credentials)
             .accept("*/*")
             .contentType(JSON)

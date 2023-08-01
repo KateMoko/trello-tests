@@ -88,7 +88,7 @@ gradle clean TASK
 -DbaseUrl=BASE_URL
 -DtrelloUserEmail=TRELLO_USER_EMAIL
 -DtrelloUserPassword=TRELLO_USER_PASSWORD
--DapiBaseUrl=API_BASE_URLgit
+-DapiBaseUrl=API_BASE_URL
 -DtrelloApiKey=TRELLO_API_KEY
 -DtrelloApiToken=TRELLO_API_TOKEN
 ```

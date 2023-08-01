@@ -21,7 +21,6 @@ public class IntegrationsPage {
     public IntegrationsPage openPage() {
         open("/en/integrations");
         integrationsSection.shouldBe(visible);
-
         return this;
     }
 
