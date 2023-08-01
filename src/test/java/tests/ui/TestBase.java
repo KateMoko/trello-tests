@@ -54,7 +54,7 @@ public class TestBase {
         Attach.pageSource();
         Attach.browserConsoleLogs();
         if (config.getIsRemote())
-            Attach.addVideo();
+            Attach.addVideo(config.getSelenoidUrl().replace("/wd/hub", ""));
 
         closeWebDriver();
     }
