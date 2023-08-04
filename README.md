@@ -30,7 +30,7 @@ ___
 <a href="https://qameta.io/"><img src="media/logo/AllureTestOps.svg" width="50" height="50"  alt="Allure Testops"/></a>  
 <a href="https://www.atlassian.com/software/jira"><img src="media/logo/Jira.svg" width="50" height="50"  alt="Jira"/></a>  
 </div>
-In this project, the automated tests are written in <code>Java</code> using the <code>Selenide</code> framework. <code>Gradle</code> is used to build the project. <code>JUnit 5</code> is used as the unit testing framework. <code>Rest-assured</code> library was used for API tests. The tests are run from <code>Jenkins</code>. After the run is completed, a notification is sent using a bot on Telegram. <code>Selenoid</code> is used to run browsers in Docker containers. Integration with <code>Allure TestOps</code> and <code>Jira</code> is set up for test reporting and test result analytics.
+In this project, the automated tests are written in <code>Java</code> using the <code>Selenide</code> framework. <code>Gradle</code> is used to build the project. <code>JUnit 5</code> is used as the test runner. <code>Rest-assured</code> library was used for API tests. The tests are run from <code>Jenkins</code>. After the run is completed, a notification is sent using a bot on Telegram. <code>Selenoid</code> is used to run browsers in Docker containers. Integration with <code>Allure TestOps</code> and <code>Jira</code> is set up for test reporting and test result analytics.
 
 ## List of UI Tests
 - [x] Authorization with email and password
