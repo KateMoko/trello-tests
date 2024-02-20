@@ -14,6 +14,7 @@ import pages.IntegrationsPage;
 @Story("Search integrations by integration name and description")
 @DisplayName("Search integrations")
 public class IntegrationsSearchTests extends TestBase {
+
     IntegrationsPage integrationsPage = new IntegrationsPage();
 
     @Test

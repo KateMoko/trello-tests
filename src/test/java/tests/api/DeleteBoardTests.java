@@ -32,7 +32,7 @@ public class DeleteBoardTests {
         step("Send DELETE request to delete board", () ->
                 boardApi.deleteBoardById(board.getId()));
 
-        step("Verify that a 404 code is returned in response to GET request for remote item ", () -> {
+        step("Verify that a 404 code is returned in response to GET request for deleted item", () -> {
             given(requestSpec)
                     .pathParam("id", board.getId())
                     .when()
