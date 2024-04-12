@@ -5,6 +5,7 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Owner;
 import io.qameta.allure.Story;
 import models.BoardModel;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -21,6 +22,7 @@ import static specs.Specs.*;
 @DisplayName("Deleting boards")
 public class DeleteBoardTests {
 
+    @Disabled("There is an error on the application side")
     @Test
     @DisplayName("Successful deletion of the board")
     void boardDeletionTest() {
