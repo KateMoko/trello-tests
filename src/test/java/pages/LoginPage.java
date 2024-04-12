@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class LoginPage {
 
-    private final SelenideElement userEmailInput = $("#user"),
+    private final SelenideElement userEmailInput = $("#username"),
             continueButton = $("#login"),
             passwordInput = $("#password"),
             loginButton = $("#login-submit");
