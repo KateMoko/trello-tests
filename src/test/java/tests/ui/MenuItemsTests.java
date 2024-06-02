@@ -43,7 +43,7 @@ public class MenuItemsTests extends TestBase {
     @Story("Main page menu")
     @DisplayName("Menu sub-items verification:")
     @MethodSource("menuItemsTestDataProvider")
-    @ParameterizedTest(name = "For the {0} menu item following sub-items are displayed: {1}")
+    @ParameterizedTest(name = "Checking sub-items for {0} menu item")
     void menuItemsTest(String menuItem, List<String> menuSubItems) {
         step("Open main page", () ->
                 mainPage.openPage());
