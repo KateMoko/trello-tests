@@ -45,8 +45,9 @@ dependencies {
             "com.fasterxml.jackson.core:jackson-databind:$jacksonVersion",
             "com.fasterxml.jackson.core:jackson-core:$jacksonVersion",
             "org.aeonbits.owner:owner:$ownerVersion",
-            "com.github.javafaker:javafaker:$fakerVersion",
-            "org.slf4j:slf4j-simple:$slf4jVersion")
+            "com.github.javafaker:javafaker:$fakerVersion"
+    )
+    testRuntimeOnly "org.slf4j:slf4j-simple:$slf4jVersion"
     runtimeOnly "org.aspectj:aspectjweaver:$aspectjVersion"
 }
 
